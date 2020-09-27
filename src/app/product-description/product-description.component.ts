@@ -11,7 +11,7 @@ export class ProductDescriptionComponent implements OnInit
 
   albumInfo;
 
-  constructor(private _productservice: ProductService) { }
+  constructor(private _productService: ProductService) { }
 
   ngOnInit()
   {
