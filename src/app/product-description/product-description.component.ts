@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './product-description.component.html',
   styleUrls: ['./product-description.component.css']
 })
-export class ProductDescriptionComponent implements OnInit {
+export class ProductDescriptionComponent implements OnInit
+{
 
-  constructor() { }
+  albumInfo;
 
-  ngOnInit() {
+  constructor(private _productservice: ProductService) { }
+
+  ngOnInit()
+  {
+    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response)
   }
 
 }
