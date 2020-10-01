@@ -14,7 +14,8 @@ import { getLocaleNumberSymbol } from '@angular/common';
 
 
 import 'rxjs/add/operator/map';
-@Injectable{ }
+import { ProductTracklistingComponent } from './product-tracklisting/product-tracklisting.component';
+@Injectable()
 export class ProductService
 {
 
@@ -34,7 +35,8 @@ export class ProductService
   declarations: [
     AppComponent,
     ProductPageComponent,
-    ProductDescriptionComponent
+    ProductDescriptionComponent,
+    ProductTracklistingComponent
   ],
   imports: [
     BrowserModule,
