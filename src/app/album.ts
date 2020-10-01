@@ -1,3 +1,7 @@
+
+// tslint:disable-next-line:import-spacing
+import { Track } from './track';
+
 export interface Album
 {
   name: string;
