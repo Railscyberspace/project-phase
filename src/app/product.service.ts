@@ -5,8 +5,9 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { ProductService } from '../product.service';
 import { Album } from './album';
-
 import 'rxjs/add/operator/map';
+import { Product } from '/.product';
+
 @Component(
   {
     Selector: 'app-product-description',
@@ -19,6 +20,7 @@ export class ProductDescriptionComponent implements OnInit
   albumInfo;
 
   private _albumUrl = '../assets/album.json';
+  private _productsUrl = '/..assets/products.json';
 
   constructor(private _productService: ProductService) { }
 
@@ -42,6 +44,11 @@ export class ProductDescriptionComponent implements OnInit
         return
         this._http.get(this._albumUrl).map((Response)
           => <Album> Response.json());
+      }
+      getProducts(): Observable<Product[]>
+      {
+        return this._http.get(this._productsUrl).map((response) => <Product[]> response.json());
+
       }
 
     }
