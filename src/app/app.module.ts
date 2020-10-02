@@ -27,7 +27,7 @@ export class ProductService
   {
     return this._http.get(this._albumUrl).map(
       // tslint:disable-next-line:no-shadowed-variable
-      (Response => Response.json());
+      (Response => Response.json()));
   }
 }
 

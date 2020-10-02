@@ -45,27 +45,3 @@ export class ProductDescriptionComponent implements OnInit
       }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
