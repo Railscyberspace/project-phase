@@ -3,13 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { ProductService } from './product.service';
+import { ProductService } from '../product.service';
 import { Album } from './album';
 
 import 'rxjs/add/operator/map';
 @Component(
   {
-    Selector: 'app-prouct-description',
+    Selector: 'app-product-description',
     templatetUrl: './product-description.component.html',
     styleUrls: ['./product-decription.component.css']
   })
