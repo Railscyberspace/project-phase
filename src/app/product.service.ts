@@ -1,7 +1,6 @@
-import { templateJitUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { ProductService } from '../product.service';
 import { Album } from './album';
@@ -10,17 +9,18 @@ import { Product } from './product';
 
 @Component(
   {
-    Selector: 'app-product-description',
-    templatetUrl: './product-description.component.html',
-    styleUrls: ['./product-decription.component.css']
+    selector: 'app-product-list',
+    templateUrl: './product-list.component.html',
+    styleUrls: ['./product-list.component.css']
   })
-
-export class ProductDescriptionComponent implements OnInit
+@Injectable()
+export class ProductListComponent implements OnInit
 {
   albumInfo;
 
-  private _albumUrl = '../assets/album.json';
-  private _productsUrl = '/..assets/products.json';
+
+  products: Product[];
+
 
   constructor(private _productService: ProductService) { }
 
@@ -35,7 +35,9 @@ export class ProductDescriptionComponent implements OnInit
     {
 
       private _albumUrl = '../assets/album.json';
-      _productsUrl: string;
+
+      private _productsUrl = '../assets/products.json';
+
 
       constructor(private _http: Http) { }
 
