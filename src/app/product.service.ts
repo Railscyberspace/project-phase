@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { ProductService } from '../product.service';
 import { Album } from './album';
 import 'rxjs/add/operator/map';
-import { Product } from '/.product';
+import { Product } from './product';
 
 @Component(
   {
@@ -35,6 +35,7 @@ export class ProductDescriptionComponent implements OnInit
     {
 
       private _albumUrl = '../assets/album.json';
+      _productsUrl: string;
 
       constructor(private _http: Http) { }
 
