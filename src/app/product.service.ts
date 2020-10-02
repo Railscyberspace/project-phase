@@ -44,8 +44,8 @@ export class ProductListComponent implements OnInit
 
       getAlbum(id: number): Observable<Album>
       {
-        return this._http.get(this._albumUrl).map((Response)
-          => <Album> Response.json());
+        return this._http.get(this._albumUrl).map((response)
+          => <Album> response.json());
       }
 
       getProducts(): Observable<Product[]>
