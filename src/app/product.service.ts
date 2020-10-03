@@ -42,9 +42,9 @@ export class ProductListComponent implements OnInit
       constructor(private _http: Http) { }
 
 
-      getAlbum(id: number): Observable<Album>
+      getAlbum(_id: number): Observable<Album>
       {
-        return this._http.get(this._albumUrl).map((response)
+        return this._http.get(this._albumUrl).map(response
           => <Album> response.json());
       }
 
